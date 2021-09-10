@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <title>Whack A Mole!</title>
+</head>
+<body>
+
+<header>
+  <ul class="header">
+    <li><h3 class="level"></h3></li>
+    <li><h3 class="time"></h3></li>
+    <li><h1>Whack-a-mole!</h1></li>
+    <li><h3 class="score"></h3></li>
+    <li><h3 class="moves"></h3></li>
+  </ul>
+
+  <button class="start-btn">Start!</button>
+</header>
+
+<main>
+  <audio src="./audio/main-theme.mp3" type="audio/mp3" class="main-theme sound" loop="loop"></audio>
+  <audio src="./audio/kick1.mp3" type="audio/mp3" class="kick-sound sound"></audio>
+  <audio src="./audio/kick2.mp3" type="audio/mp3" class="kick-sound sound"></audio>
+  <audio src="./audio/end-game.mp3" type="audio/mp3" class="end-game-sound sound"></audio>
+  <audio src="./audio/win-game.mp3" type="audio/mp3" class="win-game-sound sound"></audio>
+  <div class="game">
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+  </div>
+  <div class="message-block"></div>
+    <div class="best-score-block">
+      Your best score: <br> 
+      Level: <span class="best-level">1</span> <br> 
+      Score: <span class="best-score">0</span>
+    </div>
+    <div class="buttons">
+      <button class="volume-off button"><i class="fas fa-volume-up"></i></button>
+      <button class="volume-on button"><i class="fas fa-volume-mute"></i></button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

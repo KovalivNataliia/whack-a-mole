@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #ffc0cb;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+  margin-left: -30px;
+}
+
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 25px;
+  width: 100px;
+}
+
+h3.risk-zone {
+  color: red;
+}
+
+.start-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: #fadadd;
+  border: 2px solid #ff91af;
+}
+
+.game {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.hole:after {
+  display: block;
+  background: url('./img/dirt.svg') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('./img/mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.mole.up {
+  top: 0;
+  cursor: pointer;
+}
+
+.message-block {
+  position: absolute;
+  top: 300px;
+  left: 490px;
+  width: 400px;
+  height: 200px;
+  font-size: 80px;
+  background-color: rgba(250, 218, 221, 0.6);
+  border: 2px solid #ff91af;
+  transform: translateX(-300%);
+  transition: transform 1s ease-in-out;
+  z-index: 3;
+}
+
+.message-block.visible {
+  transform: translateX(0%);
+}
+
+.best-score-block {
+  position: absolute;
+  top: 500px;
+  right: 100px;
+  width: 200px;
+  height: 120px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: rgba(250, 218, 221, 0.6);
+  border: 2px solid #ff91af;
+}
+
+.buttons {
+  position: absolute;
+  top: 440px;
+  right: 180px;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  color: #e75480;
+  cursor: pointer;
+}
+
+.button:hover {
+  font-size: 33px;
+}
+
+.volume-off {
+  display: block;
+}
+
+.volume-on {
+  display: none;
+}

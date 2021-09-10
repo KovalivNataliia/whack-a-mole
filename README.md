@@ -1,1 +1,1 @@
-# whack-a-mole
+[Live Demo](https://whack-a-mole-rsschool.netlify.app/)<br/>
